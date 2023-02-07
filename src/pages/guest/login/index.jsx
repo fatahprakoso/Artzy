@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import SplashScreen from "../../general/splash";
 import LoginNavbar from "./components/navbar";
 import LoginForm from "./components/form";
+
+import { login } from "../../../api/login";
 
 import styles from "./styles.module.scss";
 
@@ -11,7 +14,25 @@ import styles from "./styles.module.scss";
  * @returns {component} Login page that what guest user would see
  */
 const Login = () => {
+  const navigate = useNavigate();
+
   const [isSplash, setIsSplash] = useState(true);
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const tryToLogin = async () => {
+    const result = await login({
+      username: email,
+      password,
+    });
+
+    if (result?.data?.token) {
+      document.cookie = `token=${result}`;
+      navigate("/home");
+    } else {
+      alert(result);
+    }
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,7 +48,13 @@ const Login = () => {
     <>
       <div className={styles.loginContainer}>
         <LoginNavbar />
-        <LoginForm />
+        <LoginForm
+          emailData={email}
+          setEmail={setEmail}
+          passwordData={password}
+          setPassword={setPassword}
+          login={tryToLogin}
+        />
       </div>
     </>
   );

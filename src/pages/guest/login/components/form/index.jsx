@@ -4,7 +4,13 @@ import { BsQuestionCircle } from "react-icons/bs";
 
 import styles from "./styles.module.scss";
 
-const LoginForm = () => {
+const LoginForm = ({
+  emailData,
+  setEmail,
+  passwordData,
+  setPassword,
+  login,
+}) => {
   const password = useRef();
 
   const tooglePassword = () => {
@@ -20,6 +26,8 @@ const LoginForm = () => {
           name="email"
           className={styles.emailInput}
           placeholder="EMAIL"
+          value={emailData}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <div className={styles.passwordContainer}>
@@ -29,6 +37,8 @@ const LoginForm = () => {
             className={styles.passwordInput}
             placeholder="PASSWORD"
             ref={password}
+            value={passwordData}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <BsQuestionCircle
             onClick={tooglePassword}
@@ -37,7 +47,9 @@ const LoginForm = () => {
           />
         </div>
 
-        <button className={styles.buttonLogin}>LOG IN</button>
+        <button className={styles.buttonLogin} onClick={login}>
+          LOG IN
+        </button>
       </div>
     </>
   );
