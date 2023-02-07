@@ -4,13 +4,11 @@ import { RouterProvider } from "react-router-dom";
 
 import routers from "./routers";
 
-import LoadingScreen from "./pages/general/loadingScreen";
-
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Suspense fallback={<LoadingScreen />}>
+    <Suspense fallback={null}>
       <RouterProvider router={routers} />
     </Suspense>
   </React.StrictMode>
