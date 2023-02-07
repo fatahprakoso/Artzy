@@ -1,6 +1,6 @@
 .navbarContainer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
   align-items: center;
 
   width: 100%;
@@ -8,13 +8,15 @@
 
   border-bottom: 1.5px solid #d6d6d6;
 
+  div {
+    display: flex;
+    justify-content: center;
+  }
+
   .title {
     font-weight: 300;
     font-size: 30px;
-  }
-
-  .close {
-    position: absolute;
-    right: 20px;
+    display: flex;
+    justify-content: center;
   }
 }

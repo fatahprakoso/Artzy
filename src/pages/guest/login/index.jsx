@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import SplashScreen from "../../general/splash";
-import LoginNavbar from "./components/navbar";
 import LoginForm from "./components/form";
+import Navbar from "../../../components/navbar";
 
-import { login } from "../../../api/login";
+import { AiOutlineClose } from "react-icons/ai";
 
 import styles from "./styles.module.scss";
 
@@ -21,17 +21,19 @@ const Login = () => {
   const [password, setPassword] = useState();
 
   const tryToLogin = async () => {
-    const result = await login({
-      username: email,
-      password,
-    });
+    // const result = await login({
+    //   username: email,
+    //   password,
+    // });
 
-    if (result?.data?.token) {
-      document.cookie = `token=${result}`;
-      navigate("/home");
-    } else {
-      alert(result);
-    }
+    // if (result?.data?.token) {
+    //   document.cookie = `token=${result}`;
+    //   navigate("/home");
+    // } else {
+    //   alert(result);
+    // }
+
+    navigate("/home");
   };
 
   useEffect(() => {
@@ -47,7 +49,7 @@ const Login = () => {
   return (
     <>
       <div className={styles.loginContainer}>
-        <LoginNavbar />
+        <Navbar sec2={"Log in"} sec3={<AiOutlineClose size={22.5} />} />
         <LoginForm
           emailData={email}
           setEmail={setEmail}
