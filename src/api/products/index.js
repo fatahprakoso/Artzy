@@ -8,4 +8,12 @@ const getAllProducts = async () => {
   }
 };
 
-export { getAllProducts };
+const getDetailProduct = async (id) => {
+  try {
+    return await api.get("products/" + id);
+  } catch (error) {
+    return error;
+  }
+};
+
+export { getAllProducts, getDetailProduct };

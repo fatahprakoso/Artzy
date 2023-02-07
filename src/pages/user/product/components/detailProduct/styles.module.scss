@@ -1,0 +1,38 @@
+.detailProductContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  .head {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    .title {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .price {
+      font-weight: 300;
+    }
+  }
+
+  .inputGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+
+    select {
+      width: 45%;
+      height: 30px;
+    }
+  }
+
+  .description {
+    width: 90%;
+  }
+}
