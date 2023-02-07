@@ -9,14 +9,7 @@ import guestRoutes from "./guest.router";
  * generalRoutes for general actor (user and guest)
  * @type {Array<Object>}
  */
-const routes = [
-  ...userRoutes,
-  ...guestRoutes,
-  {
-    path: "/",
-    element: lazy(() => import("../pages/guest/login/index")),
-  },
-];
+const routes = [...userRoutes, ...guestRoutes];
 
 /**
  * processed routes so react-router can use defined routes
