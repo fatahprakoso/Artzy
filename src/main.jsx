@@ -4,13 +4,13 @@ import { RouterProvider } from "react-router-dom";
 
 import routers from "./routers";
 
-import SplashScreen from "./pages/general/splash";
+import LoadingScreen from "./pages/general/loadingScreen";
 
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Suspense fallback={<SplashScreen />}>
+    <Suspense fallback={<LoadingScreen />}>
       <RouterProvider router={routers} />
     </Suspense>
   </React.StrictMode>
