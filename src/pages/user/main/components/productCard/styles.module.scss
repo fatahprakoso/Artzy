@@ -1,0 +1,31 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 175px;
+  height: 250px;
+  border: 2px solid rgba(192, 192, 192, 0.582);
+
+  .productImage {
+    width: 175px;
+    height: 180px;
+    object-fit: contain;
+  }
+
+  .cardInfo {
+    border-top: 2px solid rgba(192, 192, 192, 0.582);
+    padding: 5px;
+
+    .productDetailContainer {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 300;
+
+      .price {
+        font-weight: 500;
+        color: blue;
+      }
+    }
+  }
+}
