@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import SplashScreen from "../../general/splash";
 import LoginForm from "./components/form";
 import Navbar from "../../../components/navbar";
+import LoadingLogin from "./components/loadingLogin";
+
+import { login } from "../../../api/login";
 
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -19,21 +22,25 @@ const Login = () => {
   const [isSplash, setIsSplash] = useState(true);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [loading, setLoading] = useState(false);
 
-  const tryToLogin = async () => {
-    // const result = await login({
-    //   username: email,
-    //   password,
-    // });
+  const tryToLogin = () => {
+    setLoading(() => true);
 
-    // if (result?.data?.token) {
-    //   document.cookie = `token=${result}`;
-    //   navigate("/home");
-    // } else {
-    //   alert(result);
-    // }
-
-    navigate("/home");
+    login({
+      username: email,
+      password,
+    })
+      .then((result) => {
+        if (!result?.data?.token) {
+          alert("wrong data!");
+          return;
+        }
+        document.cookie = `token=${result}`;
+        navigate("/home");
+      })
+      .catch((e) => alert(e))
+      .finally(() => setLoading(() => false));
   };
 
   useEffect(() => {
@@ -56,6 +63,7 @@ const Login = () => {
           passwordData={password}
           setPassword={setPassword}
           login={tryToLogin}
+          loading={loading}
         />
       </div>
     </>

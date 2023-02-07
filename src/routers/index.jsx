@@ -1,18 +1,17 @@
-import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 import userRoutes from "./user.router";
 import guestRoutes from "./guest.router";
 
 /**
- * wraped all routes from userRouters for user actor, guestRoutes for guest actor, and
- * generalRoutes for general actor (user and guest)
+ * Wraped routes from userRouters for user actor and guestRoutes for guest actor if checkLoggedIn is true.
+ * Else it would return routes of guest actor
  * @type {Array<Object>}
  */
-const routes = [...userRoutes, ...guestRoutes];
+const routes = [...guestRoutes, ...userRoutes];
 
 /**
- * processed routes so react-router can use defined routes
+ * Processed routes so react-router can use defined routes
  * @type {Array<Object>}
  */
 const routers = createBrowserRouter(

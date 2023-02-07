@@ -1,6 +1,7 @@
 import { useRef } from "react";
 
 import { BsQuestionCircle } from "react-icons/bs";
+import LoadingLogin from "../loadingLogin";
 
 import styles from "./styles.module.scss";
 
@@ -10,6 +11,7 @@ const LoginForm = ({
   passwordData,
   setPassword,
   login,
+  loading,
 }) => {
   const password = useRef();
 
@@ -51,6 +53,7 @@ const LoginForm = ({
           LOG IN
         </button>
       </div>
+      {loading ? <LoadingLogin /> : undefined}
     </>
   );
 };
