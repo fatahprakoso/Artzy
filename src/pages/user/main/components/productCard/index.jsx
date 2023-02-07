@@ -15,7 +15,7 @@ const ProdcutCard = ({ image, title, category, price, id }) => {
         <img src={image} alt="product" className={styles.productImage} />
         <div className={styles.cardInfo}>
           <div className={styles.productNameContainer}>
-            {title.length > 20 ? title.substr(0, 17) + "..." : title}
+            {title.length > 15 ? title.substr(0, 12) + "..." : title}
           </div>
           <div className={styles.productDetailContainer}>
             <span>{category}</span>
