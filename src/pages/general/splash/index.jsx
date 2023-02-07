@@ -1,7 +1,13 @@
+import Loading from "./components/loading";
+
+import styles from "./styles.module.scss";
+
 const SplashScreen = () => {
   return (
     <>
-      <h1>SPLASH SCREEN</h1>
+      <div className={styles.splashContainer}>
+        <Loading />
+      </div>
     </>
   );
 };
