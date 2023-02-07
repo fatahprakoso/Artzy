@@ -1,7 +1,16 @@
+import { AiOutlineClose } from "react-icons/ai";
+
+import styles from "./styles.module.scss";
+
 const LoginNavbar = () => {
   return (
     <>
-      <h3>it's navbar</h3>
+      <div className={styles.navbarContainer}>
+        <div className={styles.title}>Log in</div>
+        <div className={styles.close}>
+          <AiOutlineClose size={22.5} />
+        </div>
+      </div>
     </>
   );
 };
