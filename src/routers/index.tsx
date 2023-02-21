@@ -1,18 +1,20 @@
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 import userRoutes from "./user.router";
 import guestRoutes from "./guest.router";
+import { Router } from "../types/interfaces";
 
 /**
- * Wraped routes from userRouters for user actor and guestRoutes for guest actor if checkLoggedIn is true.
- * Else it would return routes of guest actor
- * @type {Array<Object>}
+ * routes
+ *
+ * Wraped routes from userRouters and guestRoutes
+ * @type {Router[]}
  */
 const routes = [...guestRoutes, ...userRoutes];
 
 /**
  * Processed routes so react-router can use defined routes
- * @type {Array<Object>}
  */
 const routers = createBrowserRouter(
   routes.map((route) => {
