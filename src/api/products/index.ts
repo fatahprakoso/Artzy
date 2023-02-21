@@ -1,8 +1,8 @@
-import { api } from "../../config/axios";
+import { fakeApi } from "../../config/axios";
 
 const getAllProducts = async () => {
   try {
-    return await api.get("products");
+    return await fakeApi.get("products");
   } catch (error) {
     return error;
   }
@@ -10,7 +10,7 @@ const getAllProducts = async () => {
 
 const getDetailProduct = async (id) => {
   try {
-    return await api.get("products/" + id);
+    return await fakeApi.get("products/" + id);
   } catch (error) {
     return error;
   }

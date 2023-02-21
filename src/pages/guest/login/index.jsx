@@ -27,10 +27,7 @@ const Login = () => {
   const tryToLogin = () => {
     setLoading(() => true);
 
-    login({
-      username: email,
-      password,
-    })
+    login(email, password)
       .then((result) => {
         if (!result?.data?.token) {
           alert("wrong data!");

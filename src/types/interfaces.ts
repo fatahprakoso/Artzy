@@ -26,4 +26,27 @@ interface Router {
   element: LazyExoticComponent<ComponentType>;
 }
 
-export { Router };
+/**
+ * @interface AxiosBase
+ *
+ * represents custom configuration of axios
+ */
+interface AxiosBase {
+  /**
+   * baseURL of api (commonly domain of api)
+   */
+  baseURL: string;
+
+  /**
+   * request timeout
+   * request will throws to exception if timeout exceeded
+   */
+  timeout: number;
+
+  /**
+   * request header
+   */
+  headers: object;
+}
+
+export { Router, AxiosBase };
