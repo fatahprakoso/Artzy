@@ -4,6 +4,7 @@ import { AxiosBase } from "../types/interfaces";
 /**
  * implemented AxiosBase interface for fakeAPI
  *
+ * @constant {@link fakeApiConfig}
  * @see {@link https://fakestoreapi.com/ fakeAPIDocs} for api documentations
  */
 const fakeApiConfig: AxiosBase = {
@@ -18,8 +19,10 @@ const fakeApiConfig: AxiosBase = {
 
 /**
  * ready to use fake api
+ *
+ * @constant {@link fakeApi}
  * @type {AxiosInstance}
  */
-const fakeApi = axios.create(fakeApiConfig);
+const fakeApi: AxiosInstance = axios.create(fakeApiConfig);
 
 export { fakeApi };
