@@ -1,7 +1,6 @@
 /**
- * @interface APIResponse
- *
  * represents error data for response of error API's request
+ * @interface {@link APIErrorResponse}
  */
 export default interface APIErrorResponse {
   /**

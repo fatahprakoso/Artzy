@@ -1,8 +1,8 @@
 /**
- * @interface ProductRating
- * @private private interface used for Product interface
- *
  * model used for one of Product's properties
+ *
+ * @interface {@link ProductRating}
+ * @private private interface used for Product interface
  */
 interface ProductRating {
   /**
@@ -17,12 +17,11 @@ interface ProductRating {
 }
 
 /**
- * @interface Product
- *
  * Product Model based on Fake Api's Product data
  *
- * @see documentation {@link https://fakestoreapi.com}
- * @see example {@link https://fakestoreapi.com/products/1}
+ * @interface {@link Product}
+ * @see {@link https://fakestoreapi.com api documentation}
+ * @see {@link https://fakestoreapi.com/products/1 api example}
  */
 export default interface Product {
   /**

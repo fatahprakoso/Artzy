@@ -1,7 +1,6 @@
 /**
- * @interface APIResponse
- *
  * represents needed data for response of API's request
+ * @interface {@link APIResponse}
  */
 export default interface APIResponse {
   /**
