@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 /**
  * it's component of product card that will displayed on home page
  *
- * @function ProductCard
+ * @function {@link ProductCard}
  * @param {any} props component props
  * @param {Product} props.product Product's data
  */
@@ -16,7 +16,7 @@ const ProdcutCard = (props: { product: Product }) => {
 
   /**
    * event handler function for navigate to detail product page
-   * @function detailProduct
+   * @function {@link detailProduct}
    * @param {number} id id of targeted product
    */
   const detailProduct = (id) => {

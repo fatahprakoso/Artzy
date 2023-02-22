@@ -21,7 +21,7 @@ import styles from "./styles.module.scss";
  *
  * route path used: "/home"
  *
- * @function user.main.index
+ * @function {@link index main}
  */
 const index = () => {
   /**

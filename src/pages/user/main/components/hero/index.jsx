@@ -2,6 +2,11 @@ import HeroImage from "../../../../../assets/hero.jpg";
 
 import styles from "./styles.module.scss";
 
+/**
+ * it's component of home hero that will displayed on home page
+ *
+ * @function {@link Hero}
+ */
 const Hero = () => {
   return (
     <>
