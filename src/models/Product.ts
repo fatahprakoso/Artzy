@@ -1,5 +1,6 @@
 /**
  * @interface ProductRating
+ * @private private interface used for Product interface
  *
  * model used for one of Product's properties
  */

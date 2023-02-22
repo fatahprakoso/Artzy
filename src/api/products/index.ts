@@ -1,17 +1,14 @@
 import { fakeApi } from "../../config/axios";
+import APIResponse from "../../models/APIResponse";
 
 /**
  * @function getAllProducts
  * @async get all products request
  * @method GET
- * @returns {Promise<object>} promise of object that represents data returned from api or error
+ * @returns {Promise<APIResponse>} Promise of APIResponse that represents data returned from api or error
  */
-const getAllProducts = async (): Promise<object> => {
-  try {
-    return await fakeApi.get("products");
-  } catch (error) {
-    return error;
-  }
+const getAllProducts = async (): Promise<APIResponse> => {
+  return await fakeApi.get("products");
 };
 
 /**
@@ -19,7 +16,7 @@ const getAllProducts = async (): Promise<object> => {
  * @async get detail product request
  * @method GET
  * @param {number} id id of targeted product
- * @returns {Promise<object>} promise of object that represents data returned from api or error
+ * @returns {Promise<object>} Promise of object that represents data returned from api or error
  */
 const getDetailProduct = async (id: number): Promise<object> => {
   try {
