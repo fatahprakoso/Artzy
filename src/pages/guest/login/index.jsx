@@ -13,17 +13,43 @@ import { AiOutlineClose } from "react-icons/ai";
 import styles from "./styles.module.scss";
 
 /**
- * A React Component that represents login page and its behaviors
- * @returns {component} Login page that what guest user would see
+ * it's container or page for login page
+ *
+ * route path used: "/"
+ *
+ * @function {@link Login}
  */
 const Login = () => {
   const navigate = useNavigate();
 
+  /**
+   * isSplash state
+   * state that will be decision parameter for rendering spalsh screen
+   */
   const [isSplash, setIsSplash] = useState(true);
+
+  /**
+   * email state
+   * inputted email of user
+   */
   const [email, setEmail] = useState();
+
+  /**
+   * email state
+   * inputted password of user
+   */
   const [password, setPassword] = useState();
+
+  /**
+   * loading state
+   * loading state of API's request for login post
+   */
   const [loading, setLoading] = useState(false);
 
+  /**
+   * event handler function for request to login api
+   * @function {@link tryToLogin}
+   */
   const tryToLogin = () => {
     setLoading(() => true);
 
@@ -40,12 +66,20 @@ const Login = () => {
       .finally(() => setLoading(() => false));
   };
 
+  /**
+   * useEffect
+   * change isSplash state to false
+   * will be runned on first render only
+   */
   useEffect(() => {
     setTimeout(() => {
       setIsSplash(() => false);
     }, 500);
   }, []);
 
+  /**
+   * splash screen will be rendered if isSplash state is true
+   */
   if (isSplash) {
     return <SplashScreen />;
   }

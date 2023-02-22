@@ -1,7 +1,7 @@
 import { fakeApi } from "../../config/axios";
 
 /**
- * @function login
+ * @function {@link login}
  * @async login request to FakeAPI
  * @method POST
  * @param {sting} username user's username

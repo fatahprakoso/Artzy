@@ -2,6 +2,14 @@ import styles from "./styles.module.scss";
 
 import { MutatingDots } from "react-loader-spinner";
 
+/**
+ * component for displaying login post loading
+ *
+ * it will displayed if loading state on parent of this component
+ * is true
+ *
+ * @function {@link LoadingLogin}
+ */
 const LoadingLogin = () => {
   return (
     <>
