@@ -1,4 +1,11 @@
-const getCookie = (cname) => {
+/**
+ * getter cookie value by cokkie's key
+ *
+ * @function {@link getCookie}
+ * @param {string} cname cokkie key
+ * @returns {string} cokkie's value
+ */
+const getCookie = (cname: string): string => {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(";");
