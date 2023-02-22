@@ -6,15 +6,16 @@ import guestRoutes from "./guest.router";
 import { Router } from "../types/interfaces";
 
 /**
- * routes
- *
  * Wraped routes from userRouters and guestRoutes
+ * @constant {@link routes}
  * @type {Router[]}
  */
-const routes = [...guestRoutes, ...userRoutes];
+const routes: Router[] = [...guestRoutes, ...userRoutes];
 
 /**
  * Processed routes so react-router can use defined routes
+ *
+ * @constant {@link routers}
  */
 const routers = createBrowserRouter(
   routes.map((route) => {

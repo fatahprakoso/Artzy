@@ -2,13 +2,11 @@ import { lazy } from "react";
 import { Router } from "../types/interfaces";
 
 /**
- * guestRoutes
- *
  * this array represents route of guest actor (actor that's not authenticated)
  *
- * this data represented with array of Router
+ * this data represented with array of Router @see {@link Router}
  *
- * @see {@link Router}
+ * @constant {@link guestRoutes}
  * @type {Router[]}
  */
 const guestRoutes: Router[] = [
