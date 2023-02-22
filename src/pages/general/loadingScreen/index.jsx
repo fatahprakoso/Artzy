@@ -2,6 +2,11 @@ import { ThreeCircles } from "react-loader-spinner";
 
 import styles from "./styles.module.scss";
 
+/**
+ * component for displaying loading page (fill horizontally and vertically)
+ *
+ * @function {@link LoadingScreen}
+ */
 const LoadingScreen = () => {
   return (
     <>

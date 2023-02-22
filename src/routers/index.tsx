@@ -1,19 +1,21 @@
-import { lazy } from "react";
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 import userRoutes from "./user.router";
 import guestRoutes from "./guest.router";
+import { Router } from "../types/interfaces";
 
 /**
- * wraped all routes from userRouters for user actor, guestRoutes for guest actor, and
- * generalRoutes for general actor (user and guest)
- * @type {Array<Object>}
+ * Wraped routes from userRouters and guestRoutes
+ * @constant {@link routes}
+ * @type {Router[]}
  */
-const routes = [...userRoutes, ...guestRoutes];
+const routes: Router[] = [...guestRoutes, ...userRoutes];
 
 /**
- * processed routes so react-router can use defined routes
- * @type {Array<Object>}
+ * Processed routes so react-router can use defined routes
+ *
+ * @constant {@link routers}
  */
 const routers = createBrowserRouter(
   routes.map((route) => {
