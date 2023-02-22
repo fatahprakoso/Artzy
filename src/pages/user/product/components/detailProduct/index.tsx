@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
  * it's component of product detail that will displayed on detail product page
  *
  * @function {@link Detail}
- * @param {any} props component props
+ * @param {any}     props         component props
  * @param {Product} props.product Product's data
  */
 const Detail = (props: { product: Product }) => {

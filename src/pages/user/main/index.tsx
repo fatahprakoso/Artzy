@@ -9,7 +9,7 @@ import { getAllProducts } from "../../../api/products";
 import LoadingScreen from "../../general/loadingScreen";
 import Navbar from "../../../components/navbar";
 import Hero from "./components/hero";
-import ProdcutCard from "./components/productCard";
+import ProductCard from "./components/productCard";
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -21,7 +21,7 @@ import styles from "./styles.module.scss";
  *
  * route path used: "/home"
  *
- * @function {@link index main}
+ * @function {@link index Main}
  */
 const index = () => {
   /**
@@ -79,7 +79,7 @@ const index = () => {
       <div className={styles.productContainer}>
         {!error && products
           ? products.map((product) => {
-              return <ProdcutCard product={product} />;
+              return <ProductCard product={product} />;
             })
           : null}
       </div>

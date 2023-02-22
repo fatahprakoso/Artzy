@@ -8,10 +8,10 @@ import styles from "./styles.module.scss";
  * it's component of product card that will displayed on home page
  *
  * @function {@link ProductCard}
- * @param {any} props component props
- * @param {Product} props.product Product's data
+ * @param {any}       props           component props
+ * @param {Product}   props.product   Product's data
  */
-const ProdcutCard = (props: { product: Product }) => {
+const ProductCard = (props: { product: Product }) => {
   const navigate = useNavigate();
 
   /**
@@ -55,4 +55,4 @@ const ProdcutCard = (props: { product: Product }) => {
   );
 };
 
-export default ProdcutCard;
+export default ProductCard;
