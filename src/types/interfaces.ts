@@ -1,10 +1,10 @@
 import { ComponentType, LazyExoticComponent } from "react";
 
 /**
- * @interface Router
  *
  * represents a single browser route of this website
  *
+ * @interface {@link Router}
  * @example <caption>example represent of implemented interface on object</caption>
  * const homePage: Router = {path: "/home", element: lazy(() => import("../pages/home"))}
  *
@@ -27,9 +27,8 @@ interface Router {
 }
 
 /**
- * @interface AxiosBase
- *
  * represents custom configuration of axios
+ * @interface {@link AxiosBase}
  */
 interface AxiosBase {
   /**
