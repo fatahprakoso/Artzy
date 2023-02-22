@@ -72,7 +72,7 @@ const index = () => {
     <>
       <Navbar
         sec1={<RxHamburgerMenu size={22.5} />}
-        sec2={"Products"}
+        sec2={<>Products</>}
         sec3={<AiOutlineSearch size={22.5} />}
       />
       <Hero />

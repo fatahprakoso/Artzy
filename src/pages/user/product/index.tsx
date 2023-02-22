@@ -78,9 +78,11 @@ const index = () => {
       <Navbar
         sec1={<IoMdArrowBack size={22.5} />}
         sec2={
-          product.title.length > 10
-            ? `${product.title.substr(0, 10)}...`
-            : product.title
+          <>
+            {product.title.length > 10
+              ? `${product.title.substr(0, 10)}...`
+              : product.title}
+          </>
         }
         sec3={<AiOutlinePlus size={22.5} />}
         onClickSec1={() => navigate("/home")}
